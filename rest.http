@@ -1,0 +1,36 @@
+GET http://localhost:5000
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MjU0MzM5MzQsImV4cCI6MTcyNTQzMzk0OSwiYXVkIjoiNjZkN2YyNDg0ZjdhNmVlMWYxYTE5YmIyIiwiaXNzIjoidGVzdC5jb20ifQ.nMT2bXr-iGJw2erZxdXMnq2PiIOFX1kA8tvgDfb6zCc
+
+###
+POST  http://localhost:5000/auth/login
+Content-Type: application/json
+
+{
+    "email":"admin@test.com",
+    "password":"test123456"
+}
+
+###
+POST  http://localhost:5000/auth/register
+Content-Type: application/json
+
+{
+    "email":"admin@test.com",
+    "password":"test123456"
+}
+
+###
+POST  http://localhost:5000/auth/refresh-token
+Content-Type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MjU0MzMyMjgsImV4cCI6MTcyNTQzMzI1OCwiYXVkIjoiNjZkN2YyNDg0ZjdhNmVlMWYxYTE5YmIyIiwiaXNzIjoidGVzdC5jb20ifQ.qzW2QOW55KBcO0cVRafZkKD835JgMHwN4rg5U4w75H0"
+}
+###
+DELETE   http://localhost:5000/auth/logout
+Content-Type: application/json
+
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MjU0MzM1ODUsImV4cCI6MTc1Njk5MTE4NSwiYXVkIjoiNjZkN2YyNDg0ZjdhNmVlMWYxYTE5YmIyIiwiaXNzIjoidGVzdC5jb20ifQ._O8-2zR2QV1hLzb14BOdBnE6jo78tTFowgV-S3gsBOw"
+}
